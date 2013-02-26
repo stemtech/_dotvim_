@@ -1,3 +1,8 @@
+" Inspired from VIMCASTS
+
+" First, load all plugins
+execute pathogen#infect()
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
  
