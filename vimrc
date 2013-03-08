@@ -1,7 +1,13 @@
 " Inspired from VIMCASTS
 
+filetype off
+
 " First, load all plugins
+" runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+
+" Remap the leader key
+let mapleader = ','
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -9,9 +15,16 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:◈
 
+" Colors
+colorscheme desert
+
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
+
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * wincmd w
 
 "Whitespace preferences and filetypes
 " Only do this part when compiled with support for autocommands
