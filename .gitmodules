@@ -31,3 +31,9 @@
 [submodule "bundle/visincr"]
 	path = bundle/visincr
 	url = https://github.com/vim-scripts/VisIncr.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/session"]
+	path = bundle/session
+	url = https://github.com/xolox/vim-session.git

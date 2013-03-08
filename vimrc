@@ -43,6 +43,8 @@ if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
    
   " Treat .rss files as XML
+  autocmd BufNewFile,BufRead *.h[otmic] setfiletype c
+  " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 endif
 
