@@ -1,5 +1,8 @@
 " Inspired from VIMCASTS
 
+" No VI compatiblity
+set nocompatible
+
 filetype off
 
 " First, load all plugins
@@ -25,6 +28,7 @@ highlight SpecialKey guifg=#4a4a59
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter * wincmd w
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "Whitespace preferences and filetypes
 " Only do this part when compiled with support for autocommands
@@ -33,9 +37,9 @@ if has("autocmd")
   filetype on
    
   " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType c    setlocal ts=8 sts=4 sw=4 expandtab
-  autocmd FileType cpp  setlocal ts=8 sts=4 sw=4 expandtab
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab foldmethod=indent
+  autocmd FileType c    setlocal ts=8 sts=4 sw=4 expandtab foldmethod=indent
+  autocmd FileType cpp  setlocal ts=8 sts=4 sw=4 expandtab foldmethod=indent
    
   " Customisations based on house-style (arbitrary)
   autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
