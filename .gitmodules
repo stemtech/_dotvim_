@@ -40,3 +40,15 @@
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/cscope"]
+	path = bundle/cscope
+	url = https://github.com/brookhong/cscope.vim.git
+[submodule "bundle/doxygen-support"]
+	path = bundle/doxygen-support
+	url = https://github.com/vim-scripts/doxygen-support.vim.git
+[submodule "bundle/plantuml-syntax"]
+	path = bundle/plantuml-syntax
+	url = https://github.com/vim-scripts/plantuml-syntax.git
+[submodule "bundle/vim-visual-increment"]
+	path = bundle/vim-visual-increment
+	url = https://github.com/triglav/vim-visual-increment.git
